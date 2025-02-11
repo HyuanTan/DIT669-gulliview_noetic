@@ -17,9 +17,12 @@ roslaunch dots_ucs circle_grid_auto_pattern_4k.launch
 ```
 python3 test_tools.py
 ```
+[Error Analysis.pdf](./Error%20Analysis.pdf)
 
-
-![](./doc_images/Prospects.png)
+[5.3 Dot Based Evaluation.pdf](./5.3%20Dot%20Based%20Evaluation.pdf)
 
 ## dots based coodinate
+![](./doc_images/Prospects.png)
+
+
 ![](./doc_images/coodination.png)
