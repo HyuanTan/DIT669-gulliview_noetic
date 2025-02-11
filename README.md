@@ -10,7 +10,7 @@ clone file to src/ under ROS workspace :)
 [README](./usb_cam_cv/README.md)
 
 
-# Lab5333 Computer
+# Lab5355 Computer
 ## Dot Based Evaluation
 [README](./dots_ucs/README.md)
 
