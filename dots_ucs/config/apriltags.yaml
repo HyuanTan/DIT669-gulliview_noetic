@@ -1,0 +1,25 @@
+# tag_size: 0.15
+tag_size: 0.155
+# position in：
+# left_up, right_up, right_down, left_down
+tags:
+  - id: 0
+    center: [0.0, 0.0, 0.0]
+  - id: 1
+    center: [4.28, 0, 0]
+  - id: 2
+    center: [0, 2, 0]
+  - id: 3
+    center: [4.28, 2, 0]
+  - id: 4
+    center: [0, 4, 0]
+  - id: 5
+    center: [4.28, 4, 0]
+  - id: 6
+    center: [0, 6, 0]
+  - id: 7
+    center: [4.28, 6, 0]
+  - id: 8
+    center: [0, 8, 0]
+  - id: 9
+    center: [4.28, 8, 0]

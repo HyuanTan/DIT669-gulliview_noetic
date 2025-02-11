@@ -1,0 +1,20 @@
+Row Statistics:
+  ID: camera2
+  Mean: 42.342742093161725
+  Median: 42.329923846065824
+  Variance: 0.06827293276286961
+  Size: 1566
+  ZscoreMean: 42.342742093161725
+  ZscoreVariance: 0.06827293276286961
+  ZscoreSize: 1566
+
+Column Statistics:
+  ID: camera2
+  Mean: 41.82126404392028
+  Median: 41.82060346829179
+  Variance: 0.14864465688269246
+  Size: 1590
+  ZscoreMean: 41.832830381626
+  ZscoreVariance: 0.12257554500992396
+  ZscoreSize: 1582
+

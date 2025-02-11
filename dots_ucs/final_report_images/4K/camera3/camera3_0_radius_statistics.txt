@@ -1,0 +1,10 @@
+Radius Statistics:
+  ID: camera3
+  Mean: 11.022960204081633
+  Median: 11.0273
+  Variance: 0.08178605432784951
+  Size: 1470
+  ZscoreMean: 11.052722406639004
+  ZscoreVariance: 0.02801618942878624
+  ZscoreSize: 1446
+

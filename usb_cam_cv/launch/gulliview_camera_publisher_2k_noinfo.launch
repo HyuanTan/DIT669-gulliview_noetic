@@ -1,0 +1,49 @@
+<launch>
+
+    <param name="topic_name" value="/custom_camera/image_raw" />
+    <param name="camera_index" value="1" />
+    <param name="image_width" value="1920" />
+    <param name="image_height" value="1080" />
+    <param name="fps" value="30" />
+
+
+    <node pkg="usb_cam_cv" type="usb_cam_node.py" name="camera0_publisher" output="screen">
+        <rosparam>
+            topic_name: /camera0/image_raw
+            camera_index: 0
+            image_width: 1920
+            image_height: 1080
+            fps: 10
+        </rosparam>
+    </node>
+
+    <node pkg="usb_cam_cv" type="usb_cam_node.py" name="camera1_publisher" output="screen">
+        <rosparam>
+            topic_name: /camera1/image_raw
+            camera_index: 2
+            image_width: 1920
+            image_height: 1080
+            fps: 10
+        </rosparam>
+    </node>
+
+    <node pkg="usb_cam_cv" type="usb_cam_node.py" name="camera2_publisher" output="screen">
+        <rosparam>
+            topic_name: /camera2/image_raw
+            camera_index: 4
+            image_width: 1920
+            image_height: 1080
+            fps: 10
+        </rosparam>
+    </node>
+
+    <node pkg="usb_cam_cv" type="usb_cam_node.py" name="camera3_publisher" output="screen">
+        <rosparam>
+            topic_name: /camera3/image_raw
+            camera_index: 6
+            image_width: 1920
+            image_height: 1080
+            fps: 10
+        </rosparam>
+    </node>
+</launch>
