@@ -6,3 +6,5 @@ In this program, it also reads csv file info and obtain the transformed global c
 
 ### points_reverse:
 Since the detection of the points on the map requires to rectify the image, we apply the inverse of that transform matrix and obtain the actual pixel points of the center of dots for further evaluation.
+
+The homography matrix used in the experiment are listed in folder `homography_matrix`.
