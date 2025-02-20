@@ -25,10 +25,10 @@ gv
 zsh
 export ROS_MASTER_URI=http://192.168.50.103:11311
 
-
+## Choose one resolution
 # 2k
 roslaunch usb_cam_cv gulliview_camera_publisher_2k.launch
 
-# 4k
+# or 4k
 roslaunch usb_cam_cv gulliview_camera_publisher_4k.launch
 ```

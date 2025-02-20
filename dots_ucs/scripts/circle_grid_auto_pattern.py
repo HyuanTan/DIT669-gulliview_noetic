@@ -22,6 +22,9 @@ Flag_vis = True
 # Model = 0 # undistored,2k
 Model = 1 # Birdview,2k
 
+SavePath = "/home/holly/catkin_ws_dit669/src/dots_ucs/image/"
+
+
 class CircleGridAutoPattern:
     def __init__(self):
         rospy.init_node("circle_grid_auto_pattern", anonymous=True)
@@ -208,7 +211,7 @@ class CircleGridAutoPattern:
         if Flag_vis:
             alpha = 0.4
             cv2.addWeighted(Image_vi, alpha, frame, 1 - alpha, 0, Image_vi)
-            output_path = "/home/holly/catkin_ws_dit669/src/dots_ucs/image/" + str(self.counter) + "_visual_filtered_circles.png"
+            output_path = SavePath + str(self.counter) + "_visual_filtered_circles.png"
             cv2.imwrite(output_path, Image_vi)
 
         return frame, encoded_rows
@@ -364,7 +367,7 @@ class CircleGridAutoPattern:
                         cv2.putText(image, f"{row_idx+1}", position, cv2.FONT_HERSHEY_SIMPLEX, 
                                     front_scal, (0, 255, 0), front_thinkness, cv2.LINE_AA)
 
-            # output_path = "/home/holly/catkin_ws_dit669/src/dots_ucs/image/" + str(self.counter) + "_filtered_circles.png"
+            # output_path = SavePath + str(self.counter) + "_filtered_circles.png"
             # cv2.imwrite(output_path, Image_vi)
 
         rospy.loginfo(f"**************complete_rows size {len(full_rows)}")
@@ -512,7 +515,7 @@ class CircleGridAutoPattern:
         rospy.loginfo(f"Filtered circles after removing duplicates: {len(unique_circles)}")
 
         # self.counter = self.counter + 1
-        # output_path = "/home/holly/catkin_ws_dit669/src/dots_ucs/image/" + str(self.counter) + "_filtered_circles.png"
+        # output_path = SavePath + str(self.counter) + "_filtered_circles.png"
         # cv2.imwrite(output_path, image)
         # cv2.imshow("Filtered Circles", image)
         
@@ -742,7 +745,7 @@ class CircleGridAutoPattern:
         
         visualization, encoded_rows = self.encode_full_rows_with_centers(visualization, full_rows)
         if False:
-            file_path = "/home/holly/catkin_ws_dit669/src/dots_ucs/image/" + str(self.counter) + "_encoded_rows.csv"
+            file_path = SavePath + str(self.counter) + "_encoded_rows.csv"
             tools.save_encoded_rows_to_csv(encoded_rows, file_path)
         
         if True:
@@ -755,13 +758,13 @@ class CircleGridAutoPattern:
             visualization = self.visualize_basis_from_calculation(visualization, origin, basis_x, basis_y, scale=500)
 
         if True:
-            output_path = "/home/holly/catkin_ws_dit669/src/dots_ucs/image/" + str(self.counter) + "_filtered_circles.png"
+            output_path = SavePath + str(self.counter) + "_filtered_circles.png"
             cv2.imwrite(output_path, visualization)
             
         if True:
-            # output_path = "/home/holly/catkin_ws_dit669/src/dots_ucs/image/" + str(self.counter)
+            # output_path = SavePath + str(self.counter)
             # tools.visualize_error(full_rows, save_path=output_path)
-            file_path = "/home/holly/catkin_ws_dit669/src/dots_ucs/image/" + str(self.counter) + "_full_rows.csv"
+            file_path = SavePath + str(self.counter) + "_full_rows.csv"
             tools.save_full_rows_to_csv(full_rows, file_path)
 
         self.counter = self.counter + 1

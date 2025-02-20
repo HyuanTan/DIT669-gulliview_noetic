@@ -22,6 +22,11 @@ python3 -m pip install apriltag
 sudo pip install stitching
 
 """
+
+
+SavePath = "/home/holly/catkin_ws_dit669/src/dots_ucs/image/"
+
+
 class ImageUndistortionNode:
     def __init__(self):
         # Initialize node
@@ -179,7 +184,7 @@ class ImageUndistortionNode:
             undistorted_image = cv2.remap(cv_image, map1, map2, cv2.INTER_LINEAR)
 
             if False:
-                output_path = "/home/holly/catkin_ws_dit669/src/dots_ucs/image/" + str(self.counter) + "_undistore.png"
+                output_path = SavePath + str(self.counter) + "_undistore.png"
                 cv2.imwrite(output_path, undistorted_image)
                 self.counter = self.counter + 1
 
@@ -312,7 +317,7 @@ class ImageUndistortionNode:
 
                     world_tag_centers_2d = world_tag_centers_2d / self.resolution
                     self.homography_matrix = cv2.getPerspectiveTransform(tag_centers_2d, world_tag_centers_2d)
-                    # np.savetxt("/home/holly/catkin_ws_dit669/src/dots_ucs/image/" + "homography_matrix.txt", self.homography_matrix)
+                    # np.savetxt(SavePath + "homography_matrix.txt", self.homography_matrix)
                     # print(f"homography_matrix:{homography_matrix}")
                     self.get_global_coodinate = True
                 
@@ -424,8 +429,8 @@ class ImageUndistortionNode:
                         x, y = int(pt[0][0]), int(pt[0][1])
                         cv2.circle(top_view_image, (x, y), 5, (0, 0, 255), -1)  # Red dots for transformed points
                     '''
-                    output_path = "/home/holly/catkin_ws_dit669/src/dots_ucs/image/" + str(self.counter) + "_ori.png"
-                    output_path2 = "/home/holly/catkin_ws_dit669/src/dots_ucs/image/" + str(self.counter) + "_top_view.png"
+                    output_path = SavePath + str(self.counter) + "_ori.png"
+                    output_path2 = SavePath + str(self.counter) + "_top_view.png"
                     cv2.imwrite(output_path, bird_view_image)
                     # cv2.imwrite(output_path2, top_view_image)
                     self.counter = self.counter + 1
